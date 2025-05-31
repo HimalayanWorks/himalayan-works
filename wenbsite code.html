@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiamlayan Works | Digital Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <style>
+    :root {
+      --primary: #D13C2E; /* Changed to new primary color */
+      --background: #1C3D53; /* Changed to new background color */
+      --text-light: #FFFFFF; /* Changed to new light text color */
+      --text-muted: #F4F0E8; /* Changed to new muted text color */
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--background);
+      color: var(--text-light);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+    .logo {
+      color: var(--text-light);
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 6px;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #2ec4b6;
+    }
+    .hero {
+      min-height: 100vh;
+      background: url('https://example.com/your-suitable-image.jpg') center/cover no-repeat; /* Update with a suitable image URL */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      animation: fadeInUp 1.5s ease;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px var(--text-light); /* Added glow effect */
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #ccc;
+      text-shadow: 0 0 5px var(--text-light); /* Added glow effect */
+    }
+    .btn-primary {
+      padding: 0.9rem 2.5rem;
+      border: none;
+      border-radius: 40px;
+      background: var(--primary);
+      color: var(--text-light);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #3a8ea7;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      text-align: center;
+      position: relative;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service {
+      background: rgba(255,255,255,0.05);
+      padding: 2rem;
+      border-radius: 14px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .service i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .service h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .service p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .socials {
+      text-align: center;
+    }
+    .social-icons a {
+      color: var(--text-light);
+      font-size: 2rem;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #2ec4b6;
+    }
+    footer {
+      background: #08131f;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-top: 1px solid #333;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+      <img src="profile.jpg" alt="Logo">
+      Hiamlayan Works
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#socials">Social</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Creative Digital Marketing That Works</h1>
+      <p>Boost your brand with our world-class design, SEO, content, and social media strategy.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+  <section id="services">
+    <h2>What We Do</h2>
+    <div class="services">
+      <div class="service">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>Custom responsive websites that turn visitors into customers.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO Optimization</h3>
+        <p>Rank higher on Google and drive organic traffic with expert strategies.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-video"></i>
+        <h3>Video Editing</h3>
+        <p>Engage your audience with high-quality, story-driven video content.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-palette"></i>
+        <h3>Graphic Design</h3>
+        <p>Eye-catching visuals and branding that make a lasting impression.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Digital Ads</h3>
+        <p>Targeted Facebook & Google Ads that generate real results.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-users"></i>
+        <h3>Social Media Management</h3>
+        <p>Grow your following and keep your community engaged 24/7.</p>
+      </div>
+    </div>
+  </section>
+  <section class="socials" id="socials">
+    <h2>Contact Us</h2>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/share/16PYFzHL7y/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/himalayan.works?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@himalayan.works?_t=ZS-8wo2XLrsMEL&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Hiamlayan Works — All rights reserved.</p>
+    <p>Built with ❤️ for passionate brands.</p>
+  </footer>
+</body>
+</html>
